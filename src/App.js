@@ -5,6 +5,7 @@ import { Layout, Typography, Space } from 'antd';
 // insert this into index.js => import { default as Navbar } from './Navbar';
 // Then import each component with {} from './components'
 import { Navbar } from './components'
+import './App.css'
 
 const App = () => {
     return (
