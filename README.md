@@ -1,4 +1,5 @@
 # Crypto Cave!
+### A new project I am working on to practice more React and Redux. I am also interested in learning more about Crypto and Web3.
 
 # Getting Started with Create React App
 
