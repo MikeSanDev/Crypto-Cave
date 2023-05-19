@@ -1,4 +1,4 @@
-# Crypto Cave!
+# Crypto Cave! ![image](https://github.com/MikeSanDev/cryptoapp/assets/96930354/74f23de3-b3ae-4f7a-b9b2-ea4e845981ee)
 ### A new project I am working on to practice more React and Redux. I am also interested in learning more about Crypto and Web3.
 
 # Getting Started with Create React App
