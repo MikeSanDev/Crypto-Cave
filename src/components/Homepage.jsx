@@ -1,7 +1,7 @@
 import React from 'react'
 import millify from 'millify'
-import { Typography, Row, Col, Statistic } from 'antd'
-import { Link } from 'react-router-dom'
+import { Typography, Row, Col, Statistic, Input } from 'antd'
+import { Link} from 'react-router-dom'
 import { Cryptocurrencies, News } from '../components'
 import { useGetCryptosQuery } from '../services/cryptoApi'
 const { Title } = Typography;
@@ -16,6 +16,9 @@ const Homepage = () => {
 
   return (
     <>
+    <div className='search-crypto'>
+      <Input Placeholder='Search Cryptocurrency'  />
+    </div>
       <Title level={2} className="heading">Global Crypto Stats</Title>
       <Row>
         <Col span={12}><Statistic title="Total Cryptocurrencies" value={millify(globalStats.total)}/></Col>
