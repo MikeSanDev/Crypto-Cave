@@ -4,6 +4,8 @@
 
 #### A new project I am working on to practice more React and Redux. I am able to display Cryptocoins as well as thier market. price, and exchanges through this website using React, Redux Toolkit and Rapid API. I am also interested in learning more about Crypto and Web3.
 
+How to start the app:
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
