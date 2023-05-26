@@ -16,9 +16,6 @@ const Homepage = () => {
 
   return (
     <>
-    <div className='search-crypto'>
-      <Input Placeholder='Search Cryptocurrency'  />
-    </div>
       <Title level={2} className="heading">Global Crypto Stats</Title>
       <Row>
         <Col span={12}><Statistic title="Total Cryptocurrencies" value={millify(globalStats.total)}/></Col>
