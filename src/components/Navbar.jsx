@@ -10,7 +10,7 @@ const Navbar = () => {
         <div className='logo-container'>
             <Avatar src={icon} size="large"/>
             <Typography.Title level={2} className='logo'>
-                <Link to="/">CrytpoCave</Link>
+                <Link to="/">CryptoCave</Link>
             </Typography.Title>
             <Button className='menu-control-container'></Button>
         </div>
@@ -19,7 +19,7 @@ const Navbar = () => {
                 <Link to='/'>Home</Link>
             </Menu.Item>
             <Menu.Item icon={<FundOutlined />}>
-                <Link to='/cryptocurrencies'>Cryptocurrencies</Link>
+                <Link to='/Cryptocurrencies'>Cryptocurrencies</Link>
             </Menu.Item>
             <Menu.Item icon={<MoneyCollectOutlined />}>
                 <Link to='/exchanges'>Exchanges</Link>
