@@ -51,6 +51,16 @@ const CryptoDetails = () => {
       onChange={(value) =>setTimePeriod(value)}>
       {time.map((date) => <Option key={date}>{date}</Option>)}
       </Select>
+      {/* line chart */}
+      <Col className='stats-container'>
+        <Col className='coin-value-statistics'>
+          <Col className='coin-value-statistics-heading'>
+            <Title level={3} className='coin-details-heading'>
+
+            </Title>
+          </Col>
+        </Col>
+      </Col>
     </Col>
   );
 };
