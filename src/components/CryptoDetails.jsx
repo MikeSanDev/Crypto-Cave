@@ -6,6 +6,7 @@ import { Col, Row, Typography, Select } from 'antd';
 import { MoneyCollectOutlined, DollarCircleOutlined, FundOutlined, ExclamationCircleOutlined, StopOutlined, TrophyOutlined, CheckOutlined, NumberOutlined, ThunderboltOutlined } from '@ant-design/icons';
 
 import { useGetCryptoDetailsQuery, useGetCryptoHistoryQuery } from '../services/cryptoApi';
+import ColumnGroup from 'antd/es/table/ColumnGroup';
 
 const { Title, Text } = Typography;
 const { Option } = Select;
@@ -75,13 +76,14 @@ const CryptoDetails = () => {
         <Col className='other-stats-info'>
           <Col className='coin-value-statistics-heading'>
             <Title level={3} className='coin-details-heading'>
-              {cryptoDetails?.name} Value Statistics
+              Other Statistics 
             </Title>
             <p>
-              An overview showing the stats of {cryptoDetails?.name}
+              An overview showing the stats of all cryptocurrencies
             </p>
           </Col>
-          {stats.map(({ icon, title, value }) => (
+          {genericStats.map(({ icon, title, value }) => (
+            
             <Col className="coin-stats">
               <Col className="coin-stats-name">
                 <Text>{icon}</Text>
@@ -92,8 +94,31 @@ const CryptoDetails = () => {
           ))}
         </Col>
       </Col>
+      {/* <Col className='coin-desc-link'>
+          <Row className='coin-desc'>
+            <Title level={3} className='coin-details-heading'>
+              What is {cryptoDetails.name}? <br/>
+              <p>{HTMLReactParser(cryptoDetails.description)}</p>
+            </Title>
+          </Row>
+          <Col className='coin-links'>
+              <Title level={3} className='coin-details-heading'>
+                {cryptoDetails.name} links
+              </Title>
+              {cryptoDetails.links.map((link) =>
+              <Row className='coin-link' key={link.name}>
+                  <Title level={3} className='link-name'>
+                    {link.type}
+                  </Title>
+                  <a href={link.url} target="_blank" rel='noreferrer'>
+                    {link.name}
+                  </a>
+              </Row>)}
+          </Col>
+      </Col> */}
     </Col>
   );
 };
+
 
 export default CryptoDetails;
