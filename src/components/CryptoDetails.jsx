@@ -7,6 +7,7 @@ import { MoneyCollectOutlined, DollarCircleOutlined, FundOutlined, ExclamationCi
 
 import { useGetCryptoDetailsQuery, useGetCryptoHistoryQuery } from '../services/cryptoApi';
 import ColumnGroup from 'antd/es/table/ColumnGroup';
+import LineChart from './LineChart'
 
 const { Title, Text } = Typography;
 const { Option } = Select;
@@ -15,6 +16,7 @@ const CryptoDetails = () => {
   const { coinId } = useParams();
   const [timePeriod, setTimePeriod] = useState('7d');
   const { data, isFetching } = useGetCryptoDetailsQuery(coinId);
+  const { data: coinHistory} = useGetCryptoHistoryQuery({coinId, timePeriod});
   const cryptoDetails = data?.data?.coin;
 
   const time = ['3h', '24h', '7d', '30d', '1y', '3m', '3y', '5y'];
@@ -52,7 +54,9 @@ const CryptoDetails = () => {
       onChange={(value) =>setTimePeriod(value)}>
       {time.map((date) => <Option key={date}>{date}</Option>)}
       </Select>
-      {/* line chart */}
+      
+      <LineChart coinHistory={coinHistory} currentPrice={millify(cryptoDetails?.price)} coinName={cryptoDetails?.name}/>
+
       <Col className='stats-container'>
         <Col className='coin-value-statistics'>
           <Col className='coin-value-statistics-heading'>
@@ -94,18 +98,20 @@ const CryptoDetails = () => {
           ))}
         </Col>
       </Col>
-      {/* <Col className='coin-desc-link'>
+      <Col className='coin-desc-link'>
           <Row className='coin-desc'>
             <Title level={3} className='coin-details-heading'>
-              What is {cryptoDetails.name}? <br/>
-              <p>{HTMLReactParser(cryptoDetails.description)}</p>
+              What is {cryptoDetails?.name}? <br/>
+                      {cryptoDetails?.description && (
+                        <p>{HTMLReactParser(cryptoDetails.description)}</p>
+                      )}
             </Title>
           </Row>
           <Col className='coin-links'>
               <Title level={3} className='coin-details-heading'>
-                {cryptoDetails.name} links
+                {cryptoDetails?.name} links
               </Title>
-              {cryptoDetails.links.map((link) =>
+              {cryptoDetails?.links.map((link) =>
               <Row className='coin-link' key={link.name}>
                   <Title level={3} className='link-name'>
                     {link.type}
@@ -115,7 +121,7 @@ const CryptoDetails = () => {
                   </a>
               </Row>)}
           </Col>
-      </Col> */}
+      </Col>
     </Col>
   );
 };
