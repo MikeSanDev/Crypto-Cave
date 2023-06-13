@@ -42,9 +42,13 @@ const App = () => {
             All rights reserved
           </Typography.Title>
           <Space>
-            <Link to="/">Home</Link>
+            <Link className="nav-links" to="/">
+              Home
+            </Link>
             {/* <Link to='/exchanges'>Exchanges</Link> */}
-            <Link to="/news">News</Link>
+            <Link className="nav-links" to="/news">
+              News
+            </Link>
           </Space>
         </div>
       </div>
