@@ -5,6 +5,15 @@
 
 #### A new project I am working on to practice more React and Redux. I am able to display Cryptocoins as well as thier market. price, and exchanges through this website using React, Redux Toolkit and Rapid API. I am also interested in learning more about Crypto and Web3.
 
+## Home Page
+![home](https://github.com/MikeSanDev/cryptoapp/assets/96930354/5ab64039-d88b-442d-a06d-2ef9144144b6)
+
+## Search Coin
+![search](https://github.com/MikeSanDev/cryptoapp/assets/96930354/421128df-b9f5-47f2-beb1-a9a9d645acd9)
+
+## Crypto News
+![news](https://github.com/MikeSanDev/cryptoapp/assets/96930354/caf1a3ad-6c92-4d40-a7d2-8e8ed7acafa9)
+
 How to start the app:
 
 # Getting Started with Create React App
